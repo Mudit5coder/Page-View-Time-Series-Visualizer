@@ -17,7 +17,8 @@ df = df[(df['value'] >= lower_bound) & (df['value'] <= upper_bound)]
 
 
 def draw_line_plot():
-    df.plt(figsize=(12, 6))
+    plt.figure(figsize=(12, 6))  # Set the figure size
+    plt.plot(df["date"], df["value"])
     plt.title('Daily freeCodeCamp Forum Page Views 5/2016-12/2019')
     plt.xlabel('Date')
     plt.ylabel('Page Views')
